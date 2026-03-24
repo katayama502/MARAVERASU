@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
         // スクロールを一時的に無効化
         document.body.style.overflow = 'hidden';
         
-        // 2.5秒後にフェードアウト開始
+        // 5.5秒後にフェードアウト開始 (プレメッセージ 2.5s + メイン 2.0s + 余白)
         setTimeout(() => {
             openingScreen.classList.add('fade-out');
             // スクロールを再度有効化
@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
             setTimeout(() => {
                 openingScreen.style.display = 'none';
             }, 1000);
-        }, 2500);
+        }, 5500);
     }
 });
 

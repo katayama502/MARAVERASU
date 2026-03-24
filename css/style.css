@@ -62,18 +62,31 @@ h1, h2, h3, .font-display { font-family: 'Anton', sans-serif; letter-spacing: 0.
     pointer-events: none;
 }
 
+.opening-pre-message {
+    opacity: 0;
+    animation: fadeInOut 2.5s ease-in-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translateY(10px); }
+    20% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-10px); }
+}
+
 .opening-main-text {
     opacity: 0;
     transform: translateY(20px);
     animation: textFadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: 0.3s;
+    animation-delay: 3.2s;
 }
 
 .opening-sub-text {
     opacity: 0;
     transform: translateY(20px);
     animation: textFadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-    animation-delay: 0.8s;
+    animation-delay: 3.7s;
 }
 
 @keyframes textFadeInUp {
