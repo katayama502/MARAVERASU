@@ -1,3 +1,24 @@
+// オープニングアニメーションの制御
+window.addEventListener('load', () => {
+    const openingScreen = document.getElementById('opening-screen');
+    if (openingScreen) {
+        // スクロールを一時的に無効化
+        document.body.style.overflow = 'hidden';
+        
+        // 2.5秒後にフェードアウト開始
+        setTimeout(() => {
+            openingScreen.classList.add('fade-out');
+            // スクロールを再度有効化
+            document.body.style.overflow = '';
+            
+            // 完全に非表示にする
+            setTimeout(() => {
+                openingScreen.style.display = 'none';
+            }, 1000);
+        }, 2500);
+    }
+});
+
 // Lucideアイコンの初期化
 lucide.createIcons();
 
