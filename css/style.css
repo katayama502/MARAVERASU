@@ -99,3 +99,13 @@ h1, h2, h3, .font-display { font-family: 'Anton', sans-serif; letter-spacing: 0.
         transform: translateY(0);
     }
 }
+
+/* 入会特典エリアの強調アニメーション */
+@keyframes benefit-pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1); border-left-color: #000; }
+    50% { transform: scale(1.05); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1); border-left-color: #555; }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1); border-left-color: #000; }
+}
+.animate-benefit {
+    animation: benefit-pulse 1s ease-in-out infinite;
+}
