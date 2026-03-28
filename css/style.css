@@ -101,10 +101,18 @@ h1, h2, h3, .font-display { font-family: 'Anton', sans-serif; letter-spacing: 0.
 }
 
 /* 入会特典テキストの点滅アニメーション */
+@-webkit-keyframes text-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
 @keyframes text-blink {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+    50% { opacity: 0.2; }
 }
 .animate-text-blink {
+    -webkit-animation: text-blink 2s ease-in-out infinite;
     animation: text-blink 2s ease-in-out infinite;
+    will-change: opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
